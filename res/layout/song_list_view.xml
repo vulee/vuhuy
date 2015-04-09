@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content" android:orientation="vertical"
+    android:layout_width="fill_parent">
+
+    <TableRow android:layout_width="fill_parent"
+              android:layout_height="wrap_content">
+
+        <TextView android:textColor="#FF8500"
+                  android:id="@+id/songNum"
+                  android:text="55005"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:textStyle="bold"
+                  android:textSize="30sp"
+                  android:gravity="center"
+                  android:layout_weight="1"
+                  android:typeface="monospace"
+                  android:height="40sp" />
+        
+        <TextView android:textColor="#FF8500"
+                  android:id="@+id/vol"
+                  android:text="55005"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:textStyle="bold"
+                  android:gravity="center_vertical"
+                  android:layout_weight="1"
+                  android:typeface="monospace"
+                  android:height="40sp" />
+    </TableRow>
+
+    <TableRow android:layout_height="wrap_content"
+              android:layout_width="fill_parent">
+
+	    <TextView android:textColor="#37C400" 
+	                      android:id="@+id/songName"
+	                      android:layout_width="fill_parent"
+	                      android:layout_height="wrap_content"
+	                      android:text="Anh yeu em" 
+	                      android:layout_weight="1" 
+	                      android:height="20sp" />
+	
+    </TableRow>
+    <TableRow android:layout_height="wrap_content"
+              android:layout_width="fill_parent">
+
+        <TextView android:textColor="#4B4B4B" 
+                          android:id="@+id/songLyric"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:text="Hôm qua anh mơ hay... Tất cả là sự thật... Sao môi anh..."
+                          android:layout_weight="1"
+                          android:height="20sp" />
+    
+    </TableRow>
+        <TableRow android:layout_height="wrap_content"
+              android:layout_width="fill_parent">
+
+        <TextView android:textColor="#4B4B4B" 
+                          android:id="@+id/songAuthor"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:text="Le Tran Thai Vu"
+                          android:layout_weight="1"
+                          android:height="20sp" />
+    
+    </TableRow>
+
+</TableLayout>

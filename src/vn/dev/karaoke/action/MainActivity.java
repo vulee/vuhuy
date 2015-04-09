@@ -1,8 +1,10 @@
 package vn.dev.karaoke.action;
 
+import java.io.IOException;
+
 import vn.dev.karaoke.R;
 import vn.dev.karaoke.adapter.TabsPagerAdapter;
-import android.annotation.SuppressLint;
+import vn.dev.karaoke.helper.DatabaseHelper;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.FragmentTransaction;
@@ -21,11 +23,18 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     // Tab titles
     private String[] tabs = { "Tên bài hát",  "Lời bài hát", "Ca sĩ", "Mã số"};
 
-    @SuppressLint("NewApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Initial copy database to application
+        DatabaseHelper dataBaseHelper = new DatabaseHelper(getApplicationContext());
+        try{
+            dataBaseHelper.createDataBase();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
 
         viewPager = (ViewPager) findViewById(R.id.pager);
         //txtSearch = (EditText) findViewById(R.id.txtSearch);
